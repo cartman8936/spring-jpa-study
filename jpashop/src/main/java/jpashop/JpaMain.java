@@ -1,5 +1,6 @@
 package jpashop;
 
+import jpashop.domain.Book;
 import jpashop.domain.Order;
 import jpashop.domain.OrderItem;
 
@@ -16,7 +17,10 @@ public class JpaMain {
         EntityTransaction tx = em.getTransaction();
         tx.begin();
         try{
-
+            Book book = new Book();
+            book.setName("book1");
+            book.setAuthor("hclee");
+            em.persist(book);
             tx.commit();
         }catch (Exception e){
             tx.rollback();
