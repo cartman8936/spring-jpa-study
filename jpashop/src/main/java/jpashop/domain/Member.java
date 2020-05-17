@@ -10,7 +10,7 @@ public class Member {
     @Column(name = "MEMBER_ID")
     private Long id;
 
-    private Long name;
+    private String name;
 
     private String city;
 
@@ -27,11 +27,11 @@ public class Member {
         this.id = id;
     }
 
-    public Long getName() {
+    public String getName() {
         return name;
     }
 
-    public void setName(Long name) {
+    public void setName(String name) {
         this.name = name;
     }
 
@@ -58,4 +58,5 @@ public class Member {
     public void setOrders(List<Order> orders) {
         this.orders = orders;
     }
+
 }
