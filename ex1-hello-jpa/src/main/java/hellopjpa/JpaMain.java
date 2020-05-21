@@ -13,11 +13,17 @@ public class JpaMain {
         EntityTransaction tx = em.getTransaction();
         tx.begin();
         try{
-            Member member = new Member();
-            member.setId(1L);
-            member.setName("Hello A");
-            em.persist(member);
+//            Member member = new Member();
+//            member.setId(100L);
+//            member.setName("Hello A");
+//            em.persist(member);
 
+            Member member1 = em.find(Member.class, 100L);
+            Member member2 = em.find(Member.class, 100L);
+
+            System.out.println(member1.getName());
+            System.out.println(member2.getName());
+            System.out.println(member1 == member2);
             tx.commit();
         }catch (Exception e){
             tx.rollback();
