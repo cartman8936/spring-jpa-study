@@ -1,7 +1,7 @@
 package jpabook.jpashop2.domain.item;
 
 import jpabook.jpashop2.domain.Category;
-import jpabook.jpashop2.domain.exception.NotEnoughStockException;
+import jpabook.jpashop2.exception.NotEnoughStockException;
 import lombok.Getter;
 import lombok.Setter;
 import javax.persistence.*;
